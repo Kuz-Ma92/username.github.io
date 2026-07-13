@@ -1,0 +1,255 @@
+/* === Основные настройки === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #F7F6F3;
+  --text: #1A1A1A;
+  --text-muted: #6B6B6B;
+  --accent: #4A6CF7;
+  --border: #E2E0DA;
+  --card-bg: #FFFFFF;
+  --font-heading: 'Lora', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Контейнер === */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* === Шапка === */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 0;
+  background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* === Герой === */
+.hero {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero-sub {
+  color: var(--text-muted);
+  font-size: 18px;
+}
+
+/* === Карточки статей === */
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: 64px;
+}
+
+.post-card {
+  padding: 36px 0;
+  border-bottom: 1px solid var(--border);
+  border-left: 3px solid transparent;
+  padding-left: 20px;
+  transition: border-color 0.2s;
+}
+
+.post-card:hover {
+  border-left-color: var(--accent);
+}
+
+.post-date {
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.post-card h2 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 0 12px;
+  line-height: 1.3;
+}
+
+.post-card h2 a {
+  color: var(--text);
+}
+
+.post-card h2 a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post-card p {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  max-width: 580px;
+}
+
+.read-more {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+/* === Страница статьи === */
+.article-header {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 48px;
+}
+
+.article-header .post-date {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.article-header h1 {
+  font-family: var(--font-heading);
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+}
+
+.article-content {
+  max-width: 640px;
+  padding-bottom: 80px;
+}
+
+.article-content p {
+  margin-bottom: 24px;
+  color: #2A2A2A;
+}
+
+.article-content h2 {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 600;
+  margin: 40px 0 16px;
+}
+
+.article-content h3 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 32px 0 12px;
+}
+
+.article-content ul,
+.article-content ol {
+  padding-left: 24px;
+  margin-bottom: 24px;
+  color: #2A2A2A;
+}
+
+.article-content li {
+  margin-bottom: 8px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.back-link:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* === Подвал === */
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+}
+
+.site-footer p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* === Мобильная версия === */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 30px; }
+  .article-header h1 { font-size: 28px; }
+  nav { gap: 16px; }
+}

@@ -2,20 +2,56 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мой блог</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Мой блог</h1>
-    <nav><a href="index.html">Главная</a></nav>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Мой блог</a>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="#">О себе</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <article>
-      <h2><a href="post1.html">Первая статья</a></h2>
-      <p>Краткое описание статьи...</p>
-    </article>
+  <main class="container">
+
+    <section class="hero">
+      <h1>Записки о том,<br>что меня волнует</h1>
+      <p class="hero-sub">Пишу о технологиях, жизни и всём интересном</p>
+    </section>
+
+    <section class="posts">
+
+      <article class="post-card">
+        <span class="post-date">13 июля 2025</span>
+        <h2><a href="post1.html">Моя первая запись</a></h2>
+        <p>Это моя первая статья в блоге. Здесь я расскажу о том, почему решил завести блог и о чём планирую писать в будущем.</p>
+        <a href="post1.html" class="read-more">Читать →</a>
+      </article>
+
+      <article class="post-card">
+        <span class="post-date">10 июля 2025</span>
+        <h2><a href="#">Как я создавал этот сайт</a></h2>
+        <p>История о том, как я впервые написал HTML и CSS код с нуля, разместил сайт на GitHub Pages и что из этого вышло.</p>
+        <a href="#" class="read-more">Читать →</a>
+      </article>
+
+    </section>
+
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Мой блог</p>
+    </div>
+  </footer>
+
 </body>
 </html>
